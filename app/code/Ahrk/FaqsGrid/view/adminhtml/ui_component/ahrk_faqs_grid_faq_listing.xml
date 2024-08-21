@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">ahrk_faqs_grid_faq_listing.ahrk_faq_grid_faq_listing_data_source</item>
+        </item>
+    </argument>
+
+    <settings>
+        <deps>
+            <dep>ahrk_faqs_grid_faq_listing.ahrk_faq_grid_faq_listing_data_source</dep>
+        </deps>
+        <spinner>ahrk_faqs_grid_faq_columns</spinner>
+    </settings>
+    <dataSource name="ahrk_faq_grid_faq_listing_data_source" component="Magento_Ui/js/grid/provider">
+        <settings>
+            <updateUrl path="mui/index/render"/>
+        </settings>
+        <aclResource>Ahrk_FaqsGrid::faq</aclResource>
+        <dataProvider name="ahrk_faq_grid_faq_listing_data_source" class="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+            <settings>
+                <requestFieldName>id</requestFieldName>
+                <primaryFieldName>id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <columns name="ahrk_faqs_grid_faq_columns">
+        <column name="id">
+            <settings>
+                <label translate="true">ID</label>
+            </settings>
+        </column>
+        <column name="question">
+            <settings>
+                <label translate="true">Question</label>
+            </settings>
+        </column>
+        <column name="answer">
+            <settings>
+                <label translate="true">Answer</label>
+            </settings>
+        </column>
+        <column name="is_published">
+            <settings>
+                <label translate="true">Is Published</label>
+            </settings>
+        </column>
+        <column name="created_at">
+            <settings>
+                <label translate="true">Created At</label>
+            </settings>
+        </column>
+        <column name="updated_at">
+            <settings>
+                <label translate="true">Updated At</label>
+            </settings>
+        </column>
+    </columns>
+</listing>
