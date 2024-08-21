@@ -57,5 +57,7 @@
                 <label translate="true">Updated At</label>
             </settings>
         </column>
+
+        <actionsColumn name="actions" class="Ahrk\FaqsGrid\Ui\Component\Listing\Column\Actions"/>
     </columns>
 </listing>
