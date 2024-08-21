@@ -15,8 +15,8 @@ class Actions extends Column
 
     private Escaper $escaper;
 
-    public const FAQ_URL_EDIT ='faqs_grid/faqs/edit';
-    public const FAQ_URL_DELETE ='faqs_grid/faqs/delete';
+    public const FAQ_URL_EDIT ='faqs_grid/faq/edit';
+    public const FAQ_URL_DELETE ='faqs_grid/faq/delete';
 
     /**
      * @param ContextInterface $context
