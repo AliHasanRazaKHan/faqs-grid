@@ -8,7 +8,8 @@ use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;
 class Collection extends AbstractCollection
 {
 
-    protected function _construct() {
+    protected function _construct(): void
+    {
         $this->_init(Faq::class, \Ahrk\FaqsGrid\Model\ResourceModel\Faq::class);
     }
 
