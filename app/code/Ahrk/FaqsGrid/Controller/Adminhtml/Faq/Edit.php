@@ -8,9 +8,9 @@ use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\View\Result\PageFactory;
 use Magento\Framework\View\Result\Page;
 
-class Index extends Action implements HttpGetActionInterface
+class Edit extends Action implements HttpGetActionInterface
 {
-    const ADMIN_RESOURCE = "Ahrk_FaqsGrid::faq";
+    const ADMIN_RESOURCE = "Ahrk_FaqsGrid::faq_save";
 
     /**
      *
@@ -32,8 +32,7 @@ class Index extends Action implements HttpGetActionInterface
     public function execute(): Page
     {
        $page = $this->pageFactory->create();
-      // $page->setActiveMenu('Ahrk_FaqsGrid::Faq');
-       $page->getConfig()->getTitle()->prepend(__("FAQs"));
+       $page->getConfig()->getTitle()->prepend(__("Edit FAQ"));
         return $page;
     }
 }
