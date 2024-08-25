@@ -11,5 +11,8 @@
         <constraint xsi:type="primary" referenceId="PRIMARY">
             <column name="id" />
         </constraint>
+        <index referenceId="AHRK_FAQS_GRID_FAQ" indexType="fulltext">
+            <column name="question" />
+        </index>
     </table>
 </schema>

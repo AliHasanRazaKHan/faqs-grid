@@ -10,6 +10,9 @@
         },
         "constraint": {
             "PRIMARY": true
+        },
+        "index": {
+            "AHRK_FAQS_GRID_FAQ_QUESTION": true
         }
     }
 }

@@ -39,6 +39,7 @@
         <paging name="listing_paging"/>
         <columnsControls name="columns_controls"/>
         <bookmark name="bookmarks"/>
+        <filterSearch name="fulltext"/>
         <filters name="listing_filter">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
@@ -50,6 +51,18 @@
         </filters>
     </listingToolbar>
     <columns name="ahrk_faqs_grid_faq_columns">
+        <settings>
+        <childDefaults>
+            <param name="fieldAction" xsi:type="array">
+                <item name="provider" xsi:type="string">ahrk_faqs_grid_faq_listing.ahrk_faqs_grid_faq_listing.ahrk_faqs_grid_faq_columns.actions</item>
+                <item name="target" xsi:type="string">applyAction</item>
+                <item name="params" xsi:type="array">
+                    <item name="0" xsi:type="string">edit</item>
+                    <item name="1" xsi:type="string">${ $.$data.rowIndex }</item>
+                </item>
+            </param>
+        </childDefaults>
+        </settings>
         <column name="id">
             <settings>
                 <label translate="true">ID</label>
