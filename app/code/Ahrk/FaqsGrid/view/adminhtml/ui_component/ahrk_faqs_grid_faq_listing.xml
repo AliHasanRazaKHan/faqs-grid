@@ -8,7 +8,7 @@
               <item name="add" xsi:type="array">
                   <item name="name" xsi:type="string">Add</item>
                   <item name="label" xsi:type="string" translate="true">Add New FAQ</item>
-                  <item name="url" xsi:type="string">faq_grid/faq/new</item>
+                  <item name="url" xsi:type="string">faqs_grid/faq/new_action</item>
                   <item name="class" xsi:type="string">primary</item>
               </item>
         </item>
@@ -39,7 +39,15 @@
         <paging name="listing_paging"/>
         <columnsControls name="columns_controls"/>
         <bookmark name="bookmarks"/>
-        <filters name="listing_filter"/>
+        <filters name="listing_filter">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="applied" xsi:type="array">
+                        <item name="is_published" xsi:type="string">1</item>
+                    </item>
+                 </item>
+            </argument>
+        </filters>
     </listingToolbar>
     <columns name="ahrk_faqs_grid_faq_columns">
         <column name="id">
